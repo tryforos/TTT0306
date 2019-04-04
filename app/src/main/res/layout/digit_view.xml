@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/constraintLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+
+    <View
+        android:id="@+id/viewTop"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@color/colorDigits"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintDimensionRatio="8:1"
+        />
+
+    <View
+        android:id="@+id/viewBottom"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@color/colorDigits"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintDimensionRatio="8:1"
+        />
+
+    <View
+        android:id="@+id/viewMiddle"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@color/colorDigits"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintDimensionRatio="8:1"
+        />
+
+    <View
+        android:id="@+id/viewLeftTop"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@color/colorDigits"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/viewLeftBottom"
+        app:layout_constraintDimensionRatio="1:6"
+        />
+
+    <View
+        android:id="@+id/viewLeftBottom"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@color/colorDigits"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/viewLeftTop"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintDimensionRatio="1:6"
+        />
+
+    <!--android:background="@color/colorAccent"-->
+    <!--android:background="@color/colorPrimary"-->
+
+    <View
+        android:id="@+id/viewRightTop"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@color/colorDigits"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/viewRightBottom"
+        app:layout_constraintDimensionRatio="1:6"
+        />
+
+    <View
+        android:id="@+id/viewRightBottom"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@color/colorDigits"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/viewRightTop"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintDimensionRatio="1:6"
+        />
+
+
+</android.support.constraint.ConstraintLayout>

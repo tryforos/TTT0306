@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    android:id="@+id/idPage"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    >
+
+    <ImageView
+        android:id="@+id/idImage"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:srcCompat="@android:drawable/ic_popup_reminder"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true"
+        />
+
+<!--
+        app:srcCompat="@android:drawable/ic_btn_speak_now"
+        app:srcCompat="@android:drawable/btn_star_big_on"
+        app:srcCompat="@android:drawable/btn_star"
+        app:srcCompat="@android:drawable/ic_popup_reminder"
+
+        android:drawable="@drawable/button_pressed"
+        android:drawable="@drawable/button_focused"
+        android:drawable="@drawable/button_focused"
+        android:drawable="@drawable/button_normal"
+-->
+
+    <LinearLayout
+        android:id="@+id/idMainLinear"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:orientation="horizontal"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintVertical_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        >
+
+        <com.example.ttt0306projectdigitalclock.DigitViewXml
+            android:id="@+id/idDigitHoursTens"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="10dp"
+            android:layout_marginStart="10dp"
+            android:layout_weight="1"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            />
+
+        <com.example.ttt0306projectdigitalclock.DigitViewXml
+            android:id="@+id/idDigitHoursOnes"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="10dp"
+            android:layout_marginStart="10dp"
+            android:layout_weight="1"
+            app:layout_constraintStart_toEndOf="@+id/idDigitHoursTens"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            />
+
+        <com.example.ttt0306projectdigitalclock.SeparatorViewXml
+            android:id="@+id/idSeparator"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="10dp"
+            android:layout_marginStart="10dp"
+            android:layout_weight="0.5"
+            app:layout_constraintStart_toEndOf="@+id/idDigitHoursOnes"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            />
+
+        <com.example.ttt0306projectdigitalclock.DigitViewXml
+            android:id="@+id/idDigitMinutesTens"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="10dp"
+            android:layout_marginStart="10dp"
+            android:layout_weight="1"
+            app:layout_constraintStart_toEndOf="@+id/idSeparator"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            />
+
+        <com.example.ttt0306projectdigitalclock.DigitViewXml
+            android:id="@+id/idDigitMinutesOnes"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="10dp"
+            android:layout_marginStart="10dp"
+            android:layout_weight="1"
+            app:layout_constraintStart_toEndOf="@+id/idDigitMinutesTens"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            />
+
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="100dp"
+            android:orientation="vertical"
+            android:layout_weight="2"
+            app:layout_constraintStart_toEndOf="@+id/idDigitMinutesOnes"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            >
+            <!--android:background="@color/colorPrimary"-->
+
+            <TextView
+                android:id="@+id/idSecondsTop"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginStart="10dp"
+                android:layout_weight="1"
+                android:text="AM"
+                android:textSize="24sp"
+                android:textColor="@color/colorDigits"
+                app:layout_constraintBottom_toTopOf="@+id/idSecondsBottom"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                />
+
+            <LinearLayout
+                android:id="@+id/idSecondsBottom"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="2"
+                android:orientation="horizontal"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/idSecondsTop"
+                app:layout_constraintBottom_toBottomOf="parent"
+                >
+
+                <com.example.ttt0306projectdigitalclock.DigitViewXml
+                    android:id="@+id/idDigitSecondsTens"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_weight="1"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    />
+
+                <com.example.ttt0306projectdigitalclock.DigitViewXml
+                    android:id="@+id/idDigitSecondsOnes"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_weight="1"
+                    app:layout_constraintStart_toEndOf="@+id/idDigitSecondsTens"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/idDate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_weight="1"
+        android:text="5/8/1945"
+        android:textSize="24sp"
+        android:textColor="@color/colorDigits"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/idMainLinear"
+        />
+
+</android.support.constraint.ConstraintLayout>

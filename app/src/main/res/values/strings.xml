@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">TTT0306 Project Digital Clock</string>
+    <string name="menu_settings">Settings</string>
+    <string name="text_time_zones">Time Zone</string>
+    <string name="text_colors">Display Color</string>
+    <string name="text_format">Time Format</string>
+</resources>
+
